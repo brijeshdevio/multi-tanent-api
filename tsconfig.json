@@ -2,11 +2,13 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "Bundler" /* Allows: import { app } from "./app" */,
-    "allowImportingTsExtensions": true /* Optional: if you want to use .ts extensions */,
-    "noEmit": true /* Recommended: use a loader like 'tsx' to run code */,
+    "moduleResolution": "node" /* Changed from 'Bundler' to 'node' */,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "noEmit": false /* Changed to false to allow generation */,
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
