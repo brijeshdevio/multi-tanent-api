@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node" /* Changed from 'Bundler' to 'node' */,
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "noEmit": false /* Changed to false to allow generation */,
-    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types"],
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler", // Best for Bun/modern bundlers
+    "allowSyntheticDefaultImports": true, // Fixes the Express import error
+    "esModuleInterop": true, // Also helps with CommonJS/ESM interop
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src"]
 }
