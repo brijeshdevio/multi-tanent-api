@@ -1,0 +1,7 @@
+@BASE_URL=http://localhost:3000
+
+### Welcome to the Multi-Tenant API
+GET {{BASE_URL}}
+
+### Health check
+GET {{BASE_URL}}/health
